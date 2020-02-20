@@ -27,12 +27,12 @@ public class OptimalSolution
 		Arrays.parallelSort(times);
 		double avg = 0;
 		for(int x:times)
-			avg = avg+avg+x;
+			avg = avg+avg+x;//Adding to the original avg : (avg+x)
 		return avg/times.length;
 	}
 	public static void main(String[] args)
 	{
-		int [] arr = {1,10,8};
+		int [] arr = {1,3,2,4,55,3};
 		System.out.println(getAverageTime(arr));
 	}
 
