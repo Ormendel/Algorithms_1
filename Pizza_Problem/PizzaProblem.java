@@ -26,11 +26,18 @@ package Pizza_Problem;
  * the radix is smaller from the division therefor the inequality exists
  * and optimal division is X/X+1.
  * 
- * @author spyro
+ * @author Ormendel
  *
  */
 public class PizzaProblem
 {
+	
+	public static int getNumberOfPieces(double k)
+	{
+		if(k == (int)k) 
+			return (int)k+1;
+		return (int)k+2;
+	}
 	public static boolean pizza(double X, int n) 
 	{
 		int k = (int)X + 1;
@@ -50,9 +57,10 @@ public class PizzaProblem
 	}
 	
 	public static void main(String[] args) {
-		double X = 7;
+		double X = 9.9;
 		int n =10;
 		System.out.println("is that formula works? " + pizza(X,n));
+		System.out.println("is that formula works? " + getNumberOfPieces(X));
 	}
 	
 }
